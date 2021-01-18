@@ -1,0 +1,9 @@
+红黑大战    RedBlackWar
+龙虎斗      DragonTiger
+百人牛牛    HundredCows
+百家乐      BJL
+咪牌百家乐  BJL_MP
+百人炸金花  BRZJH
+百人骰宝    BRTB
+极速百家乐  JSBJL
+二人麻将    errenmj
