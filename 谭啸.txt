@@ -1,0 +1,22 @@
+P1  
+炸金花		FriedGoldenFlower
+牌九 	                PaiGow
+连环夺宝		SerialIndiana
+疯狂红包		StrongRedEnvelopes
+扫雷红包		BrRed
+二八杠		TwoEight
+
+P2
+福临门		FlmSlots
+金猪抱福		GoldenPigSlots
+水果777       	FruitsSveneSlots
+9线拉王       	NineLineSlots
+僵尸大战       	Zombie
+双喜临门       	SxlmSlots
+
+		
+
+
+
+
+
