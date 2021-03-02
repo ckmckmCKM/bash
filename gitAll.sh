@@ -57,6 +57,11 @@ build(){
     source $buildBashPath
 }
 
+#还原本地没有提交的修改
+checkoutIndex(){
+    git checkout .
+}
+
 # 测试空打印
 csEcho(){
     echo 测试空打印
@@ -75,6 +80,7 @@ switchFun(){
     4) clearTag $1 $2 ;; # 删除tag
     5) setShowTag $1 $2 ;; # 提交tag
     6) build $objPath;; #打包
+    7) checkoutIndex ;; #还原本地没有提交的修改
     *) csEcho ;;
     esac
     echo
@@ -124,7 +130,7 @@ appOrWeb(){
 
 # 读取项目tag配置
 readFun(){
-    echo 选择git操作：1拉取 2提交推送项目 3提交推送tag 4删除tag 5设置显示tag 6打包
+    echo 选择git操作：1拉取 2提交推送项目 3提交推送tag 4删除tag 5设置显示tag 6打包 7还原本地没有提交的修改
     read choose
     case $choose in
     1) echo 1拉取 ;;
@@ -132,7 +138,7 @@ readFun(){
     3) echo 3提交推送tag ;;
     4) echo 4删除tag ;;
     5) echo 5设置显示tag ;;
-    6) echo 6打包 
+    6) echo 6打包
     # 如果是p1没有写打包
     if [ $chooseCfg == 1 ]
     then 
@@ -145,10 +151,14 @@ readFun(){
     appOrWeb
     fi
     ;;
+
+    7) echo 7还原本地没有提交的修改 ;;
+
     *)
     echo 选项不存在,
     readFun
     ;;
+
     esac
     echo
 }
