@@ -114,7 +114,7 @@ appOrWeb(){
     case $chooseAW in
     1)
     echo app
-    buildBashPath=/c/Users/Administrator/Desktop/buildp2.sh
+    buildBashPath=/e/bash/buildp2.sh
     ;;
     2)
     echo web
