@@ -8,6 +8,9 @@ textNamePath=/e/bash/GitPullObjNameP1BR.txt
 # 项目tag txt文本配置 注意修改
 textPath=/e/bash/GitPull2_p1.txt
 
+#分支名字 有新分支要手动添加
+branchName=pm1
+
 
 # 得到路径的最后文件名字
 # resFile=`echo /tmp/csdn/zhengyi/test/adb.log | awk -F "/" '{print $NF}'`
@@ -16,14 +19,23 @@ textPath=/e/bash/GitPull2_p1.txt
 
 # 拉取项目
 pullGit(){
-    git pull
+    if [ $branchName == 1 ]
+    then
+    git checkout master
+    else
+    git checkout -b pm1 remotes/origin/pm1
+    git pull origin pm1
+    fi
+    # git fetch
+
+    # git pull
 }
 
 # 提交项目
 pushGit(){
     record=$2
     # 修改提交记录日志
-    # record=刷新金币
+    # record=加减倍数优化
 
     git add $1
     git commit -m $record
@@ -132,6 +144,25 @@ appOrWeb(){
 readFun(){
     echo 选择git操作：1拉取 2提交推送项目 3提交推送tag 4删除tag 5设置显示tag 6打包 7还原本地没有提交的修改
     read choose
+    # echo qqqqqqqqqqqqqqqqqqqqqqqqqqq---$chooseCfg
+    if [ $chooseCfg == 2 ] && [ $choose == 1 ]
+    then
+    echo p2项目拉取要选择分支还是主干: 1.主干 2.pm1 3.退出（任意键也是退出）
+    read chooseBranchName
+    case $chooseBranchName in
+    1)
+    branchName=1
+    ;;
+    2)
+    branchName=pm1
+    ;;
+    *)
+    echo 退出 chooseBranchName
+    readFun
+    ;;
+    esac
+    fi
+
     case $choose in
     1) echo 1拉取 ;;
     2) echo 2提交推送项目 ;;
@@ -173,6 +204,12 @@ readObjNameFun(){
     if [ ! -d $objPath ]
     then
     echo ----------------------------- objPath 路径不存在 ${objPath}
+    return
+    fi
+
+    if [ $c1 == 0 ]
+    then
+    echo ----------完了-----------------$c1
     return
     fi
 

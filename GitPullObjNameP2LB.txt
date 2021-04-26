@@ -1,5 +1,30 @@
 冰球突破      bqtpSlots
 水果小玛利    FruitsSlots
+武士斩杀      knightsSlots
+金瓶梅        pjlSlots
+水浒传        SHZ
+五龙争霸      WulongSlots
+百人牛牛      HundredCows
+福临门		FlmSlots
+水果777       	FruitsSveneSlots
+9线拉王       	NineLineSlots
+僵尸大战       	Zombie
+0
+
+冰球突破      bqtpSlots
+水果小玛利    FruitsSlots
+武士斩杀      knightsSlots
+金瓶梅        pjlSlots
+水浒传        SHZ
+五龙争霸      WulongSlots
+百人牛牛      HundredCows
+福临门		FlmSlots
+水果777       	FruitsSveneSlots
+9线拉王       	NineLineSlots
+僵尸大战       	Zombie
+
+冰球突破      bqtpSlots
+水果小玛利    FruitsSlots
 金鼠迎春      JSYCslots
 金玉满堂      JYMTSlots
 武士斩杀      knightsSlots
@@ -8,3 +33,9 @@
 财神到        WealthSlots
 五龙争霸      WulongSlots
 百人牛牛      HundredCows
+福临门		FlmSlots
+金猪抱福		GoldenPigSlots
+水果777       	FruitsSveneSlots
+9线拉王       	NineLineSlots
+僵尸大战       	Zombie
+双喜临门       	SxlmSlots
