@@ -23,8 +23,9 @@ pullGit(){
     then
     git checkout master
     else
-    git checkout -b pm1 remotes/origin/pm1
-    git pull origin pm1
+    # git checkout -b pm1 remotes/origin/pm1
+    # git pull origin pm1
+    git checkout pm1
     fi
     # git fetch
 
