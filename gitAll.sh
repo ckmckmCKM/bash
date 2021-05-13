@@ -122,7 +122,7 @@ readCfgFun(){
 }
 
 appOrWeb(){
-    echo 选择app or web：1.app 2.web
+    echo 选择app or web：1.app 2.web "(注：app打包 记得改打包上传的路径 dirpath=/home/nfs_root/qa-web-pvc-5fe80612-e10b-4112-8509-511c5ba19127/www/p2native/pm1)"
     read chooseAW
     case $chooseAW in
     1)

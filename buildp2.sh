@@ -22,7 +22,7 @@ rm $path/$game/src/physics.js
 xxh $path/$game
 cd $path
 zip -r -q $game.zip $game 
-dirpath=/home/nfs_root/qa-web-pvc-5fe80612-e10b-4112-8509-511c5ba19127/www/p2native
+dirpath=/home/nfs_root/qa-web-pvc-5fe80612-e10b-4112-8509-511c5ba19127/www/p2native/pm1
 scp $path/$game.zip root@192.168.0.189:$dirpath
 ssh root@192.168.0.189 "cd $dirpath && rm -rf $game && unzip $game.zip"
 rm -rf $path/$game
