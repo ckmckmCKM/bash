@@ -19,13 +19,18 @@ branchName=pm1
 
 # 拉取项目
 pullGit(){
-    if [ $branchName == 1 ]
-    then
+    if [ $branchName == 1 ]; then
     git checkout master
+    elif [ $branchName == pm1 ]; then
+    git checkout pm1
+    elif [ $branchName == pm2 ]; then
+    git checkout pm2
     else
     # git checkout -b pm1 remotes/origin/pm1
     # git pull origin pm1
-    git checkout pm1
+    # git checkout pm2
+    echo 默认检出master
+    git checkout master
     fi
     # git fetch
 
@@ -36,11 +41,13 @@ pullGit(){
 pushGit(){
     record=$2
     # 修改提交记录日志
-    # record=加减倍数优化
+    # record=loading
 
     git add $1
     git commit -m $record
     git push
+    # 第一次推送用下面的
+    # git push --set-upstream origin pm2
 }
 
 # 提交tag
@@ -148,7 +155,7 @@ readFun(){
     # echo qqqqqqqqqqqqqqqqqqqqqqqqqqq---$chooseCfg
     if [ $chooseCfg == 2 ] && [ $choose == 1 ]
     then
-    echo p2项目拉取要选择分支还是主干: 1.主干 2.pm1 3.退出（任意键也是退出）
+    echo p2项目拉取要选择分支还是主干: 1.主干 2.pm1 3.pm2 4.退出（任意键也是退出）
     read chooseBranchName
     case $chooseBranchName in
     1)
@@ -156,6 +163,9 @@ readFun(){
     ;;
     2)
     branchName=pm1
+    ;;
+    3)
+    branchName=pm2
     ;;
     *)
     echo 退出 chooseBranchName
